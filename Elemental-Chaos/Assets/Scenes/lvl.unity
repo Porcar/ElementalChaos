@@ -315,30 +315,20 @@ MonoBehaviour:
   walkAnimation: {fileID: 7400054, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   runAnimation: {fileID: 7400052, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   jumpPoseAnimation: {fileID: 7400056, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack1Animation: {fileID: 7400036, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack2Animation: {fileID: 7400038, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack3Animation: {fileID: 7400040, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack4Animation: {fileID: 7400042, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack5Animation: {fileID: 7400006, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack6Animation: {fileID: 7400010, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack7Animation: {fileID: 7400026, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack8Animation: {fileID: 7400034, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  TakingHitAnimation: {fileID: 7400018, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Buff1Animation: {fileID: 7400030, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Buff2Animation: {fileID: 7400032, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  DyingAnimation: {fileID: 7400048, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  GetUpAnimation: {fileID: 7400050, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   walkMaxAnimationSpeed: 1
+  trotMaxAnimationSpeed: 1
   runMaxAnimationSpeed: 1
   jumpAnimationSpeed: .75
   landAnimationSpeed: 1
   walkSpeed: 2
+  trotSpeed: 4
   runSpeed: 6
   inAirControlAcceleration: 3
   jumpHeight: 2
   gravity: 20
   speedSmoothing: 10
   rotateSpeed: 500
+  trotAfterSeconds: 3
   canJump: 1
 --- !u!143 &21831197
 CharacterController:
