@@ -51,10 +51,19 @@
      <Compile Include="Assets\Editor\Water (Pro Only)\Water4\SpecularLightingEditor.cs" />
      <Compile Include="Assets\Editor\Water (Pro Only)\Water4\WaterBaseEditor.cs" />
      <Compile Include="Assets\Editor\Water (Pro Only)\Water4\WaterEditorUtility.cs" />
+     <Compile Include="Assets\RAIN\Editor\ScriptTemplates\ActionTemplate_CS.cs" />
+     <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\RAIN\Editor\Shaders\VisualSensorLineShader.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\RAIN\Editor\Shaders\NavMeshContourShader.shader" />
+     <None Include="Assets\RAIN\Editor\Shaders\WaypointShader.shader" />
+     <None Include="Assets\RAIN\Editor\ScriptTemplates\BehaviorTreeTemplate.xml" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
+     <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
+     <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
@@ -62,6 +71,24 @@
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINUpdater">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/Editor/RAINUpdater.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINMetaform">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/RAINMetaform.dll</HintPath>
+ </Reference>
+ <Reference Include="AetherUnity">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/Editor/AetherUnity.dll</HintPath>
+ </Reference>
+ <Reference Include="RAIN">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/RAIN.dll</HintPath>
+ </Reference>
+ <Reference Include="LegionRestModel">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/Editor/LegionRestModel.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINEditor">
+ <HintPath>C:/Users/Marcelino/Documents/GitHub/ElementalChaos/Elemental-Chaos/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
