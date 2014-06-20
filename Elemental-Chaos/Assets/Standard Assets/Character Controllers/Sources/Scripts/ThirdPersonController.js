@@ -1,77 +1,52 @@
 
 // Require a character controller to be attached to the same game object
-//Character controller modified by Marcelino Porcar to work with the Wizard.
-
 @script RequireComponent(CharacterController)
 
 public var idleAnimation : AnimationClip;
 public var walkAnimation : AnimationClip;
 public var runAnimation : AnimationClip;
 public var jumpPoseAnimation : AnimationClip;
-public var Attack1Animation : AnimationClip;
-public var Attack2Animation : AnimationClip;
-public var Attack3Animation : AnimationClip;
-public var Attack4Animation : AnimationClip;
-public var Attack5Animation : AnimationClip;
-public var Attack6Animation : AnimationClip;
-public var Attack7Animation : AnimationClip;
-public var Attack8Animation : AnimationClip;
-public var TakingHitAnimation : AnimationClip;
-public var Buff1Animation : AnimationClip;
-public var Buff2Animation : AnimationClip;
-public var DyingAnimation : AnimationClip;
-public var GetUpAnimation : AnimationClip;
 
-
-public var walkMaxAnimationSpeed : float = 1.0;
+public var walkMaxAnimationSpeed : float = 0.75;
+public var trotMaxAnimationSpeed : float = 1.0;
 public var runMaxAnimationSpeed : float = 1.0;
-public var jumpAnimationSpeed : float = 0.75;
-public var landAnimationSpeed : float = 0;
+public var jumpAnimationSpeed : float = 1.15;
+public var landAnimationSpeed : float = 1.0;
 
-private var _animation : Animation;
+private var _animation;
 
 enum CharacterState {
 	Idle = 0,
 	Walking = 1,
-	Running = 2,
-	Jumping = 3,
-	Attack1 = 4,
-	Attack2 = 5,
-	Attack3 = 6,
-	Attack4 = 7,
-	Attack5 = 8,
-	Attack6 = 9,
-	Attack7 = 10,
-	Attack8 = 11,
-	TakingHit = 12,
-	Buff1 = 13,
-	Buff2 = 14,
-	Dying = 15,
-	GetUp = 16,
-	
+	Trotting = 2,
+	Running = 3,
+	Jumping = 4,
 }
 
 private var _characterState : CharacterState;
 
 // The speed when walking
-var walkSpeed = 3.0;
+var walkSpeed = 2.0;
+// after trotAfterSeconds of walking we trot with trotSpeed
+var trotSpeed = 4.0;
 // when pressing "Fire3" button (cmd) we start running
-var runSpeed = 8.0;
+var runSpeed = 6.0;
 
 var inAirControlAcceleration = 3.0;
 
 // How high do we jump when pressing jump and letting go immediately
-var jumpHeight = 2;
+var jumpHeight = 0.5;
 
 // The gravity for the character
 var gravity = 20.0;
 // The gravity in controlled descent mode
 var speedSmoothing = 10.0;
 var rotateSpeed = 500.0;
+var trotAfterSeconds = 3.0;
 
 var canJump = true;
 
-private var jumpRepeatTime = 1.1;
+private var jumpRepeatTime = 0.05;
 private var jumpTimeout = 0.15;
 private var groundedTimeout = 0.25;
 
@@ -215,10 +190,15 @@ function UpdateSmoothedMovementDirection ()
 		_characterState = CharacterState.Idle;
 		
 		// Pick speed modifier
-		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
+		if (Input.GetKey (KeyCode.LeftShift) | Input.GetKey (KeyCode.RightShift))
 		{
 			targetSpeed *= runSpeed;
 			_characterState = CharacterState.Running;
+		}
+		else if (Time.time - trotAfterSeconds > walkTimeStart)
+		{
+			targetSpeed *= trotSpeed;
+			_characterState = CharacterState.Trotting;
 		}
 		else
 		{
@@ -362,7 +342,10 @@ function Update() {
 					_animation[runAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, runMaxAnimationSpeed);
 					_animation.CrossFade(runAnimation.name);	
 				}
-				
+				else if(_characterState == CharacterState.Trotting) {
+					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, trotMaxAnimationSpeed);
+					_animation.CrossFade(walkAnimation.name);	
+				}
 				else if(_characterState == CharacterState.Walking) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
 					_animation.CrossFade(walkAnimation.name);	
