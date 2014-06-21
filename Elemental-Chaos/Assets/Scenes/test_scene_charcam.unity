@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7c43a9f6e53d55d4f872af98321a1899, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1812,6 +1812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 743031225}
+  center: {fileID: 0}
   wind: {fileID: 798380732}
   water: {fileID: 646770888}
   land: {fileID: 70783890}
@@ -1823,7 +1824,12 @@ MonoBehaviour:
   icefirePrefab: {fileID: 400000, guid: 3f418d8e2082aea42b59eed68aa7ad0c, type: 2}
   landballPrefab: {fileID: 400004, guid: 458a508756bdcf04d97bbffb87b02c80, type: 2}
   shieldballPrefab: {fileID: 400004, guid: 025e6a01350709642a6bd1b1051f0ddf, type: 2}
+  shieldfirePrefab: {fileID: 0}
+  shieldicePrefab: {fileID: 0}
+  fillwaterPrefab: {fileID: 0}
+  fillfirePrefab: {fileID: 0}
   maxElements: 3
+  elementsSelected: 0
   elementCooldown: 1
 --- !u!4 &980119636
 Transform:
@@ -1950,6 +1956,7 @@ GameObject:
   - 33: {fileID: 1113827385}
   - 65: {fileID: 1113827384}
   - 23: {fileID: 1113827383}
+  - 45: {fileID: 1113827387}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2008,6 +2015,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!45 &1113827387
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113827382}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1 &1156343472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,30 +2869,20 @@ MonoBehaviour:
   walkAnimation: {fileID: 7400054, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   runAnimation: {fileID: 7400052, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   jumpPoseAnimation: {fileID: 7400056, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack1Animation: {fileID: 7400036, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack2Animation: {fileID: 7400038, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack3Animation: {fileID: 7400040, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack4Animation: {fileID: 7400042, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack5Animation: {fileID: 7400006, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack6Animation: {fileID: 7400010, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack7Animation: {fileID: 7400026, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Attack8Animation: {fileID: 7400034, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  TakingHitAnimation: {fileID: 7400018, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Buff1Animation: {fileID: 7400030, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  Buff2Animation: {fileID: 7400032, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  DyingAnimation: {fileID: 7400048, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
-  GetUpAnimation: {fileID: 7400050, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   walkMaxAnimationSpeed: 1
+  trotMaxAnimationSpeed: 1
   runMaxAnimationSpeed: 1
   jumpAnimationSpeed: .75
   landAnimationSpeed: 1
   walkSpeed: 2
+  trotSpeed: 4
   runSpeed: 6
   inAirControlAcceleration: 3
   jumpHeight: 2
   gravity: 20
   speedSmoothing: 10
   rotateSpeed: 500
+  trotAfterSeconds: 3
   canJump: 1
 --- !u!143 &2130022066
 CharacterController:
