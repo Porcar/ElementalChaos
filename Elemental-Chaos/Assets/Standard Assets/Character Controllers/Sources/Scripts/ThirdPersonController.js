@@ -190,20 +190,20 @@ function UpdateSmoothedMovementDirection ()
 		_characterState = CharacterState.Idle;
 		
 		// Pick speed modifier
-		if (Input.GetKey (KeyCode.LeftShift) | Input.GetKey (KeyCode.RightShift))
-		{
-			targetSpeed *= runSpeed;
-			_characterState = CharacterState.Running;
-		}
-		else if (Time.time - trotAfterSeconds > walkTimeStart)
-		{
-			targetSpeed *= trotSpeed;
-			_characterState = CharacterState.Trotting;
-		}
-		else
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
 		{
 			targetSpeed *= walkSpeed;
 			_characterState = CharacterState.Walking;
+		}
+	/*	else if (Time.time - trotAfterSeconds > walkTimeStart)
+		{
+			targetSpeed *= trotSpeed;
+			_characterState = CharacterState.Trotting;
+		} */
+		else
+		{
+			targetSpeed *= runSpeed;
+			_characterState = CharacterState.Running;
 		}
 		
 		moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
