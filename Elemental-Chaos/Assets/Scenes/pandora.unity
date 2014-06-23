@@ -74,6 +74,66 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &201344759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 201344761}
+  - 131: {fileID: 201344760}
+  - 114: {fileID: 201344762}
+  m_Layer: 0
+  m_Name: loguencio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!131 &201344760
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201344759}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 100350c900f3d9f49b012410d3d095ab, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: -339.470001
+    y: -195.070007
+    width: 634
+    height: 436
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &201344761
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201344759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &201344762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201344759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8559a7b9c517144abfddc9e1523c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 201344759}
 --- !u!1 &1251111779
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +143,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1251111781}
   - 131: {fileID: 1251111780}
+  - 114: {fileID: 1251111782}
   m_Layer: 0
   m_Name: pb_vectorized1
   m_TagString: Untagged
@@ -97,7 +158,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251111779}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: a04110012017b584c9a0ada4a92b30b3, type: 3}
+  m_Texture: {fileID: 2800000, guid: f391a59f985022f4c8234687dbc441cb, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -121,6 +182,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1251111782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251111779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde994a587ec1db4ca314f1bc9f6bf7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 1251111779}
+  color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1437715633
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,11 +250,11 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1437715633}
-  lengthInSec: 5
+  lengthInSec: 2.29999995
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
@@ -220,7 +294,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 2.57999992
+      scalar: 4.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1246,6 +1320,7 @@ GameObject:
   - 92: {fileID: 1967360936}
   - 124: {fileID: 1967360935}
   - 81: {fileID: 1967360934}
+  - 114: {fileID: 1967360939}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1318,3 +1393,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1967360939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967360933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9625f2b9ed30a8144b38cec579956e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
