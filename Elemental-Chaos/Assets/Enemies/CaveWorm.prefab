@@ -896,7 +896,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400118}
   - 111: {fileID: 11100000}
-  - 114: {fileID: 11400002}
   - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
   m_Layer: 0
@@ -1836,7 +1835,7 @@ MonoBehaviour:
       childrenvisible="True"><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="9" id="element0" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="10" id="element1" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
-      reference="11" id="element2" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
+      reference="11" id="element2" childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="12" id="element3" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="13" id="element4" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="14" id="element5" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
@@ -1986,17 +1985,6 @@ MonoBehaviour:
     - {fileID: 400118}
     - {fileID: 11400000, guid: 37a682149251582438ae1aad088be428, type: 2}
     _serializedCustomData: []
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e429ed74431364d9a24650c6003fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

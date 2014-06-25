@@ -897,7 +897,6 @@ GameObject:
   - 111: {fileID: 11100000}
   - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: demon
   m_TagString: Untagged
@@ -2012,17 +2011,6 @@ MonoBehaviour:
     - {fileID: 400118}
     - {fileID: 400118}
     _serializedCustomData: []
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e429ed74431364d9a24650c6003fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -1499,7 +1499,6 @@ GameObject:
   - 4: {fileID: 400198}
   - 111: {fileID: 11100000}
   - 136: {fileID: 13600000}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: Succubus
@@ -4847,17 +4846,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e429ed74431364d9a24650c6003fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4890,11 +4878,11 @@ MonoBehaviour:
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
       /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.BasicMotor" reference="3" id="_motor" childrenvisible="False"
-      /><field type="RAIN.Animation.BasicAnimator" reference="6" id="_animator" childrenvisible="True"
+      /><field type="RAIN.Animation.BasicAnimator" reference="6" id="_animator" childrenvisible="False"
       /><field type="RAIN.Navigation.BasicNavigator" reference="7" id="_navigator"
       /><field type="RAIN.Perception.BasicSenses" reference="8" id="_senses" childrenvisible="False"
       /><field type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
-      childrenvisible="False" /></reference><reference type="RAIN.Memory.BasicMemory"
+      childrenvisible="True" /></reference><reference type="RAIN.Memory.BasicMemory"
       refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
       elementtype="System.String" /><field type="System.Collections.Generic.List"
       id="_memoryValues" elementtype="RAIN.Memory.MemoryObject" /></reference><reference
