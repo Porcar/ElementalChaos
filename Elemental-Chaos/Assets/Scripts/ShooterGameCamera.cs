@@ -42,6 +42,7 @@ public class ShooterGameCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		Screen.showCursor = false;
 		// [edit] no aimtarget gameobject needs to be placed anymore 
 		GameObject g=new GameObject();
 		aimTarget=g.transform;

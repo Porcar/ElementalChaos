@@ -4,26 +4,42 @@ using System.Collections;
 public class Healt : MonoBehaviour {
 
 	public float health;
-	public float currHealth;
+	static public float currHealth;
 	public float fractionHealth;
+	float DieTime=0;
 
 	public GameObject h1, h2, h3, h4, h5;
 	Color color, colorPoint, transparent;
+	public static bool isFireShield, isWaterShield, isEarthShield, isAirShield, isElementShield;
 	
 
 	// Use this for initialization
 	void Start () {
 		color = Color.gray; colorPoint = Color.gray; transparent.a = 0.0f;
 		health = 100.0f;
-		currHealth = 0.0f;
+		currHealth = 100.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		currHealth += Time.deltaTime*5;
+
+		if (this.gameObject.transform.position.y < 18.0f) 
+			Application.LoadLevel (3);
+				
+
+		if (currHealth<100)
+			currHealth += Time.deltaTime;
 		fractionHealth = currHealth / health;
 		setOpacity ();
+		if(currHealth<=0){
+				GameObject.Find("TheWizard").gameObject.animation.Play("Dying");
+			DieTime +=Time.deltaTime;
+		}
+		if (DieTime > 2)
+			Application.LoadLevel (3);
 	}
+
+
 	
 	void setOpacity(){
 		if (fractionHealth <= 0.2) {

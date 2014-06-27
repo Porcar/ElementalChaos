@@ -5,6 +5,8 @@ public class BallBehaviour : MonoBehaviour {
 	
 	public float speed = 6;
 	public float mass;
+	public float normalDamage, shieldDamage, generalShield;
+	public bool isWater, isFire, isEarth, isAir;
 	
 	public GameObject explosionPrefab = null;
 	// Use this for initialization
@@ -31,9 +33,37 @@ public class BallBehaviour : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.tag == "player") {
+		if(collision.gameObject.transform.tag == "Enemy"){
+			Debug.Log("LE PEGUEEE");
+			if(collision.gameObject.GetComponent<DamageNPC>().fireInm && isFire
+			   ||collision.gameObject.GetComponent<DamageNPC>().waterInm && isWater
+			   ||collision.gameObject.GetComponent<DamageNPC>().airInm && isFire
+			   ||collision.gameObject.GetComponent<DamageNPC>().earthInm && isEarth
+			   )
+				collision.gameObject.GetComponent<DamageNPC>().health -= shieldDamage;
+			else
+				collision.gameObject.GetComponent<DamageNPC>().health -= normalDamage;
 		}
 		explode ();
-		
+	}
+
+	void damage(){
+
+			if(Healt.isFireShield && isFire || Healt.isWaterShield && isWater ||
+		   	   Healt.isEarthShield && isEarth || Healt.isAirShield && isAir)
+				Healt.currHealth -= shieldDamage;
+			else if(Healt.isElementShield)
+				Healt.currHealth -= generalShield;
+			else
+				Healt.currHealth -= normalDamage;
+
+		}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.transform.name == "DamagePoint" || other.gameObject.transform.name=="Orb") {
+			damage();
+			explode ();
+		}
+
 	}
 }

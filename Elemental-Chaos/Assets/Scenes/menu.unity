@@ -280,6 +280,10 @@ Prefab:
       propertyPath: m_RootMapOrder
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400058, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e10cbf0462136f4dbe6c033f6b20e27, type: 3}
   m_RootGameObject: {fileID: 1998053090}
@@ -541,7 +545,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 540916689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77c174bce50ccc4eaa84e2793f92796, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b67a1649730cc4cba9dcc550e5f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugar: {fileID: 2800000, guid: 7514df97407035a4e86470e3e757c1e9, type: 3}
@@ -552,6 +556,12 @@ MonoBehaviour:
   creditos_over: {fileID: 0}
   salir: {fileID: 0}
   salir_over: {fileID: 0}
+  iralmenu: {fileID: 0}
+  iralmenu_over: {fileID: 0}
+  reiniciar: {fileID: 0}
+  reiniciar_over: {fileID: 0}
+  salirdeljuego: {fileID: 0}
+  salirdeljuego_over: {fileID: 0}
 --- !u!1 &588271593
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +961,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 983160285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77c174bce50ccc4eaa84e2793f92796, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b67a1649730cc4cba9dcc550e5f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugar: {fileID: 0}
@@ -962,6 +972,12 @@ MonoBehaviour:
   creditos_over: {fileID: 0}
   salir: {fileID: 2800000, guid: 7721d0e9895331544abc27d676f37486, type: 3}
   salir_over: {fileID: 2800000, guid: c63cfbc487c0eb84ba5dc3fbf44f41d8, type: 3}
+  iralmenu: {fileID: 0}
+  iralmenu_over: {fileID: 0}
+  reiniciar: {fileID: 0}
+  reiniciar_over: {fileID: 0}
+  salirdeljuego: {fileID: 0}
+  salirdeljuego_over: {fileID: 0}
 --- !u!1 &1014503385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1635,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1490838523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77c174bce50ccc4eaa84e2793f92796, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b67a1649730cc4cba9dcc550e5f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugar: {fileID: 0}
@@ -1630,6 +1646,12 @@ MonoBehaviour:
   creditos_over: {fileID: 0}
   salir: {fileID: 0}
   salir_over: {fileID: 0}
+  iralmenu: {fileID: 0}
+  iralmenu_over: {fileID: 0}
+  reiniciar: {fileID: 0}
+  reiniciar_over: {fileID: 0}
+  salirdeljuego: {fileID: 0}
+  salirdeljuego_over: {fileID: 0}
 --- !u!1 &1536794288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779857596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77c174bce50ccc4eaa84e2793f92796, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b67a1649730cc4cba9dcc550e5f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugar: {fileID: 0}
@@ -1919,6 +1941,12 @@ MonoBehaviour:
   creditos_over: {fileID: 2800000, guid: 20f2d980ea06b8b42b387fd777ea9f6b, type: 3}
   salir: {fileID: 0}
   salir_over: {fileID: 0}
+  iralmenu: {fileID: 0}
+  iralmenu_over: {fileID: 0}
+  reiniciar: {fileID: 0}
+  reiniciar_over: {fileID: 0}
+  salirdeljuego: {fileID: 0}
+  salirdeljuego_over: {fileID: 0}
 --- !u!1 &1816433420
 GameObject:
   m_ObjectHideFlags: 0

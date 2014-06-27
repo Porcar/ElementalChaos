@@ -16,6 +16,6 @@ public class Scene1 : MonoBehaviour {
 
 
 		if (Input.GetMouseButtonDown (0) || counter > 8)
-			Application.LoadLevel (1);
+			Application.LoadLevel (4);
 	}
 }

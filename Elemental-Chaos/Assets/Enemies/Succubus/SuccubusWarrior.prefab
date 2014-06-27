@@ -4808,7 +4808,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 64, guid: 00000000000000000000000000000000, type: 0}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11400002
@@ -4819,7 +4819,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 64, guid: 00000000000000000000000000000000, type: 0}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &13700000
